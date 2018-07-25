@@ -49,7 +49,7 @@
                     Grid.Row="1"
                     Grid.Column="1"
                     IsPassword="True"
-                    Text="{Binding PassWord, Mode=TwoWay}"
+                    Text="{Binding Password, Mode=TwoWay}"
                     Placeholder="Ingresa tu Clave..."
                 ></Entry>
                 </Grid>
@@ -76,46 +76,50 @@
                         VerticalOptions="CenterAndExpand">
                 </Label>
                 <StackLayout
-                Margin="40,0">
+                    Margin="40,0"
+                    Orientation="Horizontal"
+                    VerticalOptions="CenterAndExpand">
                     <Button
-                    BackgroundColor="Navy"
-                    BorderRadius="20"
-                    Command="{Binding LoginCommand}"
-                    HeightRequest="40"
-                    TextColor="White"
-                    Text="Ingresar"
-                ></Button>
+                        BackgroundColor="Navy"
+                        BorderRadius="20"
+                        Command="{Binding LoginCommand}"
+                        HeightRequest="40"
+                        HorizontalOptions="FillAndExpand"
+                        IsEnabled="{Binding IsEnable, Mode=TwoWay}"
+                        TextColor="White"
+                        Text="Ingresar">
+                    </Button>
                     <Button
-                    BackgroundColor="Purple"
-                    BorderRadius="20"
-                    HeightRequest="40"
-                    TextColor="White"
-                    Text="Resgistrarse"
-                ></Button>
+                        BackgroundColor="Purple"
+                        BorderRadius="20"
+                        HeightRequest="40"
+                        HorizontalOptions="FillAndExpand"
+                        IsEnabled="{Binding IsEnable, Mode=TwoWay}"
+                        TextColor="White"
+                        Text="Resgistrarse">
+                    </Button>
                 </StackLayout>
                 <StackLayout
-                Orientation="Horizontal"
-                HorizontalOptions="Center">
+                    HorizontalOptions="Center"
+                    Orientation="Horizontal"
+                    VerticalOptions="EndAndExpand">
                     <Image
-                    Source="facebook_logo.png"
-                    WidthRequest="60">
-
+                        Source="facebook_logo.png"
+                        WidthRequest="60">
                     </Image>
                     <Image
-                    Source="twitter_logo.png"
-                    WidthRequest="65">
-
+                        Source="twitter_logo.png"
+                        WidthRequest="65">
                     </Image>
                     <Image
-                    Source="google_logo.png"
-                    WidthRequest="80">
-
+                        Source="google_logo.png"
+                        WidthRequest="80">
                     </Image>
                 </StackLayout>
 
 
             </StackLayout>
         </ScrollView>
-        
+
     </ContentPage.Content>
 </ContentPage>
