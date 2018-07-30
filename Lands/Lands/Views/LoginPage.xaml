@@ -3,25 +3,21 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Lands.Views.LoginPage"
              BindingContext="{Binding Main, Source={StaticResource Locator}}"
-             Title="Login">
+             Title="LOGIN">
     <ContentPage.Content>
         <ScrollView
             BindingContext = "{Binding Login}">
             <StackLayout
-            Padding="0,20"
-            Margin="5,0">
-                <Label 
-                FontAttributes="Bold"
-                FontSize="Large"
-                HorizontalOptions="Center"
-                Text="LANDS"
-                />
+            Padding="5">
                 <Image
                 Source="logo_onu.png"
-                WidthRequest="130">
+                WidthRequest="130"
+                 VerticalOptions="CenterAndExpand">
                 </Image>
                 <Grid
-                Margin="10,0">
+                    Margin="10,0"
+                    VerticalOptions="CenterAndExpand">
+                    
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="*"/>
                         <ColumnDefinition Width="2*"/>
@@ -30,7 +26,7 @@
                     Grid.Row="0"
                     Grid.Column="0"
                     Text="Email"
-                    Margin="0,13,0,0"
+                    VerticalOptions="Center"
                 />
                     <Entry
                     Grid.Row="0"
@@ -43,7 +39,7 @@
                     Grid.Row="1"
                     Grid.Column="0"
                     Text="Password"
-                    Margin="0,13,0,0"
+                    VerticalOptions="Center"
                 />
                     <Entry
                     Grid.Row="1"
@@ -58,7 +54,9 @@
                     VerticalOptions="CenterAndExpand">
                 </ActivityIndicator>
                 <StackLayout
-                Orientation="Horizontal">
+                    Margin="10,0"
+                    Orientation="Horizontal"
+                    VerticalOptions="CenterAndExpand">
                     <Label
                     HorizontalOptions="StartAndExpand"
                     Text="Recordar en este dispositivo"
@@ -96,7 +94,7 @@
                         HorizontalOptions="FillAndExpand"
                         IsEnabled="{Binding IsEnable, Mode=TwoWay}"
                         TextColor="White"
-                        Text="Resgistrarse">
+                        Text="Registro">
                     </Button>
                 </StackLayout>
                 <StackLayout
